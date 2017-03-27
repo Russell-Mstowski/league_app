@@ -2,9 +2,18 @@
 
 <h2>Name: <%= @summoner["name"] %> </h2>
 <h2>Id: <%= @summoner["id"] %> </h2>
-<h2>Level : <%= @summoner["summonerLevel"] %> </h2>
+<h2>Level: <%= @summoner["summonerLevel"] %> </h2>
 
-<%= @ranked_info %>
+<h1>Ranked Solo Stats: </h1>
+
+<h2>Wins: <%= @ranked_info['playerStatSummaries'][9]['wins'] %> </h2>
+<h2>Losses: <%= @ranked_info['playerStatSummaries'][9]['losses'] %> </h2>
+<h2>Total Champion Kills: <%= @ranked_info['playerStatSummaries'][9]['aggregatedStats']['totalChampionKills'] %> </h2>
+<h2>Losses: <%= @ranked_info['playerStatSummaries'][9]['aggregatedStats']['totalChampionKills'] %> </h2>
+<h2>Total Minion Kills: <%= @ranked_info['playerStatSummaries'][9]['aggregatedStats']['totalMinionKills'] %> </h2>
+<h2>Total Turret Kills: <%= @ranked_info['playerStatSummaries'][9]['aggregatedStats']['totalTurretsKilled'] %> </h2>
+<h2>Total Neutral Minion Kills: <%= @ranked_info['playerStatSummaries'][9]['aggregatedStats']['totalNeutralMinionsKilled'] %> </h2>
+<h2>Total Assists: <%= @ranked_info['playerStatSummaries'][9]['aggregatedStats']['totalAssists'] %> </h2>
 
 <br>
 <button><a href="/">home</a></button>
