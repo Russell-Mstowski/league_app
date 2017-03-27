@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application for the game League of Legends
 
-Things you may want to cover:
+So far you can only search your summoner name and see all you info and stats
 
-* Ruby version
+#specs
 
-* System dependencies
+* Rails 5.0.2
 
-* Configuration
+* Ruby 2.3.1
 
-* Database creation
+#setup
 
-* Database initialization
+* clone and cd into app
 
-* How to run the test suite
+* bundle install
+  - bundle
 
-* Services (job queues, cache servers, search engines, etc.)
+* start server
+  - rails s
 
-* Deployment instructions
-
-* ...
+* go to localhost:3000 and search your summoner name
