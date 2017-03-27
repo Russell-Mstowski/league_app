@@ -9,6 +9,15 @@ class SummonersController < ApplicationController
     @summoner = summoner_info[summoner_name]
     summ_id = @summoner['id']
 
-    @ranked_info = Unirest.get("https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/#{summ_id}/summary?api_key=RGAPI-24F77282-16E6-45DF-A053-24C3FAB0904F").body
+    @player_summary = Unirest.get("https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/#{summ_id}/summary?api_key=RGAPI-24F77282-16E6-45DF-A053-24C3FAB0904F").body
+
+    game_type = @player_summary['playerStatSummaries']
+
+    game_type.each do |type|
+      if type['playerStatSummaryType'] == "RankedSolo5x5"
+        @ranked_info = type
+      end
+    end
+
   end
 end
