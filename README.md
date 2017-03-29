@@ -2,7 +2,7 @@
 
 This is an application for the game League of Legends using Riots API.
 
-So far you can only search your summoner name and see your info and ranked stats
+So far you can only search your summoner name and see your info and ranked solo 5x5 stats
 
 #specs
 
