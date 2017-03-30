@@ -14,10 +14,9 @@ class SummonersController < ApplicationController
     game_type = @player_summary['playerStatSummaries']
 
     game_type.each do |type|
-      if type['playerStatSummaryType'] == "RankedSolo5x5"
+      if type['playerStatSummaryType'] == 'RankedSolo5x5'
         @ranked_info = type
       end
     end
-
   end
 end
